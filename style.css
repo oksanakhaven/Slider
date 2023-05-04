@@ -1,0 +1,30 @@
+.slider {
+    width: 420px;
+    height: 500px;
+    margin: 30px auto; /* centering (means that the top and bottom margins of the element will be 30 pixels, while the left and right margins will be automatically calculated by the browser to center the element) */
+    overflow: hidden; /* виключаємо видимість слайдерів за межами батькивського блоку*/
+}
+
+.slider-line {
+    width: 2520px; /* 420px*6 - in order to pictures stay in one line */
+    height: 500px;
+    /* are used to position an HTML element relative (відносно) to its original position */
+    position: relative;
+    left: 0;
+    /*'transition' використовується, коли нам потрібно плавно змінити CSS-властивості між двома станами елемента 
+    "all" specifies that all properties of the element that change will be animated.
+    "ease" sets the timing for the animation.
+    "1s" sets the duration of the animation to one second. */
+    transition: all ease 1s; /*"transition: all ease 1s;" встановлює анімацію для всіх змін властивостей елемента з плавністю "ease" та тривалістю одну секунду*/
+    display: flex; /* to make children flexible in order to all pictures stay in one line */
+}
+
+body {
+    background-color:rgb(94, 133, 112);
+}
+
+/* use flexbox (flex conteiner) to center the buttons */
+divCenter { 
+    display: flex; /* use 'display flex' on parent container in order to make children flexible */
+    justify-content: center; /* centering elements */
+  }
